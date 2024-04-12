@@ -14,5 +14,6 @@ public class MessageProducer {
 
     public void produceMessage(String message) {
         kafkaTemplate.send("messageTopic", message);
+        log.info("Message sent: {}", message);
     }
 }
